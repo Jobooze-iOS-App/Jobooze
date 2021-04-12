@@ -94,7 +94,7 @@ Jobooze is an app designed to help users keep track of jobs they are interested 
 
 ### [BONUS] Digital Wireframes & Mockups
 
-<img src="https://i.imgur.com/A9HJL6j.jpg" width=300 height=550>
+<img src="https://i.imgur.com/A9HJL6j.jpg" width=285 height=550>
 <img src="https://i.imgur.com/mxtMKjI.jpg" width=200 height=300>
 <img src="https://i.imgur.com/1nk24T3.jpg" width=200 height=300>
 <img src="https://i.imgur.com/aZRdLnW.jpg" width=200 height=300>
