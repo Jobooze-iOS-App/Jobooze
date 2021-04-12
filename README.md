@@ -1,5 +1,6 @@
 # Jobooze
 Jobooze is an app designed to help users keep track of jobs they are interested in and jobs they've applied to
+
 *Final Project for Codepath iOS course Spring 2021*
 
 ## Table of Contents
