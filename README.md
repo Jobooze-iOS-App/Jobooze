@@ -93,7 +93,14 @@ Jobooze is an app designed to help users keep track of jobs they are interested 
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+<img src="https://imgur.com/A9HJL6j" height=200>
+<img src="https://imgur.com/mxtMKjI" height=200>
+<img src="https://imgur.com/1nk24T3" height=200>
+<img src="https://imgur.com/aZRdLnW" height=200>
+<img src="https://imgur.com/5dxqKqq" height=200>
+<img src="https://imgur.com/PI0ppdW" height=200>
+<img src="https://imgur.com/iLGyfJA" height=200>
 
 #### Link to Figma Wireframe https://www.figma.com/file/pWJJft77IDMFFPZLyF6tME/Jobooze-iOS?node-id=0%3A1
 
