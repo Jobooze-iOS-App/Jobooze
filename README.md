@@ -103,10 +103,32 @@ Jobooze is an app designed to help users keep track of jobs they are interested 
 
 ### [BONUS] Interactive Prototype
 
-
-
 ## Schema 
-[This section will be completed in Unit 9]
+
+### Users
+| Property |   Type   | Description |
+| -------- | -------- | ----------- |
+| userId   |  String  | Unique id for the each user |
+| fname    |  String  | user's first name |
+| lname    |  String  | user's last name |
+| email | String | Email used for signup|
+| password | String | user's pwd (should have some sort of encryption) |
+| profPic  |   File   | User profile image           |
+| resume   |   File   | User's resume|
+
+### Posted Job Entry
+| Property |   Type   | Description |
+| -------- | -------- | ----------- |
+| entryId | String   | Unique id for the created note |
+| companyName | String | Name of company for the job application |
+| jobTitle | String | Title for job applied to |
+| jobDescription | String | Short description of position referred to in posting |
+| dateApplied | DateTime | Date when the application was submitted |
+| dateCreated | DateTime | Date and time when job note was created |
+| dateUpdated | DateTime | Date and time when the post was edited/updated |
+| status | String | Current Status of job application |
+| notes | String | Any additional notes regarding job entry (i.e., important dates, follow-ups, POI, etc.)
+
 ### Models
 [Add table of models]
 ### Networking
