@@ -103,9 +103,12 @@ Jobooze is an app designed to help users keep track of jobs they are interested 
 
 ### [BONUS] Interactive Prototype
 
+
 ## Schema 
 
-### Users
+### Models
+
+#### Users
 | Property |   Type   | Description |
 | -------- | -------- | ----------- |
 | userId   |  String  | Unique id for the each user |
@@ -116,7 +119,7 @@ Jobooze is an app designed to help users keep track of jobs they are interested 
 | profPic  |   File   | User profile image           |
 | resume   |   File   | User's resume|
 
-### Posted Job Entry
+#### Posted Job Entry
 | Property |   Type   | Description |
 | -------- | -------- | ----------- |
 | entryId | String   | Unique id for the created note |
@@ -129,9 +132,27 @@ Jobooze is an app designed to help users keep track of jobs they are interested 
 | status | String | Current Status of job application |
 | notes | String | Any additional notes regarding job entry (i.e., important dates, follow-ups, POI, etc.)
 
-### Models
-[Add table of models]
 ### Networking
-- [Add list of network requests by screen ]
+
+#### List of network requests by screen
+  - Profile
+    - (Read/GET) Retrieve user info such as current profile pic, resume and other info
+    - (Update/PUT) Edit current user information
+
+  - Dashboard
+    - (Read/GET) Get all the job entries made by the user
+
+  - Job Form
+    - (Read/GET) Retrieve specific job entry
+    - (Create/ENTRY) Create a new job entry
+
+  - Edit Job Form
+    - (Read/GET) Retrieve existing job entry 
+    - (Delete) Delete existing job entry
+
+  - View Job Form
+    - (Read/GET) Get current job info
+    - (Update) Delete existing job entry
+
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
