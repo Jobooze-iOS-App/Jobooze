@@ -27,18 +27,18 @@ Jobooze is an app designed to help users keep track of jobs they are interested 
 
 **Required Must-have Stories**
 
-* Login/Logout features
-* Create a new note/record of what job the user has applied to with the appropriate tags/status (indicating a job they applied to, will apply to, how important it is to them, etc)
-* Delete unwanted notes
-* Upload files (like resumes, profile pics, etc)
-* Edit/view the listing
+- [] Login/Logout features
+- [] Create a new note/record of what job the user has applied to with the appropriate tags/status (indicating a job they applied to, will apply to, how important it is to them, etc)
+- [] Delete unwanted notes
+- [] Upload files (like resumes, profile pics, etc)
+- [] Edit/view the listing
 
 **Optional, Nice-to-have Stories**
 
-* Share feature for notes (sharing the positions you've applied to, social-media like feature)
-* Could integrate the sharing portion with LinkedIn above, where shared content could be viewed on LinkedIn
-* Settings view for like dark mode, font size, etc
-* Maybe set an expiration feature, when the note will automatically be deleted
+- [] Share feature for notes (sharing the positions you've applied to, social-media like feature)
+- [] Could integrate the sharing portion with LinkedIn above, where shared content could be viewed on LinkedIn
+- [] Settings view for like dark mode, font size, etc
+- [] Maybe set an expiration feature, when the note will automatically be deleted
 
 ### 2. Screen Archetypes
 
