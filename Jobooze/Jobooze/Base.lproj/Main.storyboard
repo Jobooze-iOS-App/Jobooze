@@ -116,7 +116,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ce-AL-61V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="418" y="-46"/>
+            <point key="canvasLocation" x="418" y="-123"/>
+        </scene>
+        <!--NewEntryViewController-->
+        <scene sceneID="1SQ-jn-8Rv">
+            <objects>
+                <viewController title="NewEntryViewController" id="ZMT-43-XxE" customClass="NewEntryViewController" customModule="Jobooze" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oHc-qR-01s">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="K1K-lR-tkS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="plus" catalog="system" id="udR-aN-gX9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H70-0B-6p1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1371" y="268"/>
         </scene>
         <!--ProfileViewController-->
         <scene sceneID="Eoi-wI-TUS">
@@ -270,11 +286,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UbI-2x-W5d" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n6O-n8-mhE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="b2M-Rh-5fr" kind="relationship" relationship="viewControllers" id="tj2-Ax-hUe"/>
+                        <segue destination="ZMT-43-XxE" kind="relationship" relationship="viewControllers" id="vGE-MV-0tP"/>
                         <segue destination="BpK-nZ-hFy" kind="relationship" relationship="viewControllers" id="Jwo-Og-KXS"/>
                     </connections>
                 </tabBarController>
@@ -286,6 +304,7 @@
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

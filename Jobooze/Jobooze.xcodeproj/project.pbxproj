@@ -18,6 +18,7 @@
 		8B2836F4262F67050098A97A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2836F3262F67050098A97A /* SignUpViewController.swift */; };
 		8B283703262F756B0098A97A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B283702262F756B0098A97A /* DashboardViewController.swift */; };
 		8B28370B262F775E0098A97A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28370A262F775E0098A97A /* ProfileViewController.swift */; };
+		8B455308263738D80086AEAD /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B455307263738D80086AEAD /* NewEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		8B2836F3262F67050098A97A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8B283702262F756B0098A97A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8B28370A262F775E0098A97A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8B455307263738D80086AEAD /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				8B2836F3262F67050098A97A /* SignUpViewController.swift */,
 				8B283702262F756B0098A97A /* DashboardViewController.swift */,
 				8B28370A262F775E0098A97A /* ProfileViewController.swift */,
+				8B455307263738D80086AEAD /* NewEntryViewController.swift */,
 				8B2836BB262F66B90098A97A /* Main.storyboard */,
 				8B2836BE262F66B90098A97A /* Assets.xcassets */,
 				8B2836C0262F66B90098A97A /* LaunchScreen.storyboard */,
@@ -272,6 +275,7 @@
 				8B2836B6262F66B90098A97A /* AppDelegate.swift in Sources */,
 				8B283703262F756B0098A97A /* DashboardViewController.swift in Sources */,
 				8B2836F4262F67050098A97A /* SignUpViewController.swift in Sources */,
+				8B455308263738D80086AEAD /* NewEntryViewController.swift in Sources */,
 				8B2836B8262F66B90098A97A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
