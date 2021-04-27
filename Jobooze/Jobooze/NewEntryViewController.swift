@@ -2,7 +2,7 @@
 //  NewEntryViewController.swift
 //  Jobooze
 //
-//  Created by Nicholas Palermo on 4/26/21.
+//  Created by Nicholas Palermo on 4/27/21.
 //
 
 import UIKit
