@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         let password = passwordField.text!
         
         PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
-            if user != nil{
+            if user != nil {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
                 print("Error with login up \(String(describing: error?.localizedDescription))")
