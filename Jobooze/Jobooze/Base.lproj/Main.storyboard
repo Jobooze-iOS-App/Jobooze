@@ -79,6 +79,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbd-Bn-wJh">
                                 <rect key="frame" x="190.66666666666666" y="552" width="47" height="30"/>
                                 <state key="normal" title="Sign in"/>
+                                <connections>
+                                    <action selector="onSignIn:" destination="gkI-W2-zGT" eventType="touchUpInside" id="i1Y-Ar-SWd"/>
+                                    <segue destination="UbI-2x-W5d" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="XGE-6Z-8Qc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9jt-6c-Zp5"/>
@@ -95,6 +99,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordField" destination="j7e-uz-DjV" id="Y5Y-6k-YGG"/>
+                        <outlet property="usernameField" destination="caN-MW-Pgs" id="LrW-dt-q0m"/>
                         <segue destination="f3c-Vr-FID" kind="presentation" identifier="ToSignUp" id="pR0-D4-eye"/>
                     </connections>
                 </viewController>
@@ -260,6 +266,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQT-FI-j5W">
                                 <rect key="frame" x="187" y="650" width="54" height="30"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="onSignUp:" destination="f3c-Vr-FID" eventType="touchUpInside" id="tu2-UJ-cgG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1k7-cH-8hI"/>
@@ -275,6 +284,13 @@
                             <constraint firstItem="1k7-cH-8hI" firstAttribute="trailing" secondItem="dYX-88-e2v" secondAttribute="trailing" constant="40" id="qGc-cI-gx4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPwdField" destination="8p5-Bm-kx0" id="IxF-RU-r25"/>
+                        <outlet property="emailField" destination="wuZ-Vr-qgc" id="i2S-lo-QG3"/>
+                        <outlet property="firstnameField" destination="HO6-xI-z3y" id="nPH-cu-eMw"/>
+                        <outlet property="lastnameField" destination="Ix9-eJ-EfT" id="MSF-cU-cfe"/>
+                        <outlet property="passwordField" destination="qLD-eP-LyS" id="xUK-7B-nBl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgf-VI-o4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
