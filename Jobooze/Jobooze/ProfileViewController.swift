@@ -9,6 +9,13 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBAction func addJob(_ sender: Any) {
+    }
+    @IBOutlet weak var position: UILabel!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var profilepic: UIImageView!
+    @IBAction func uploadBut(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
