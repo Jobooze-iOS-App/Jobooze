@@ -155,4 +155,7 @@ Jobooze is an app designed to help users keep track of jobs they are interested 
     - (Update) Delete existing job entry
 
 - [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- [OPTIONAL: List endpoints if using existing API such as Yelp
+
+Gifs:
+<img src='http://g.recordit.co/hFcNOP1pWT.gif' title='Video Walkthrough1' width='' alt='Video Walkthrough1' />
