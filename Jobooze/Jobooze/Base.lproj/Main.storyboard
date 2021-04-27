@@ -99,8 +99,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailField" destination="caN-MW-Pgs" id="E6z-Z1-uJn"/>
                         <outlet property="passwordField" destination="j7e-uz-DjV" id="Y5Y-6k-YGG"/>
+                        <outlet property="usernameField" destination="caN-MW-Pgs" id="LrW-dt-q0m"/>
                         <segue destination="f3c-Vr-FID" kind="presentation" identifier="ToSignUp" id="pR0-D4-eye"/>
                     </connections>
                 </viewController>
@@ -268,7 +268,6 @@
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="onSignUp:" destination="f3c-Vr-FID" eventType="touchUpInside" id="tu2-UJ-cgG"/>
-                                    <segue destination="UbI-2x-W5d" kind="presentation" identifier="signUpSegue" modalPresentationStyle="fullScreen" id="9mQ-Ch-uq0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -300,7 +299,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Wwj-G7-SD9">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="UbI-2x-W5d" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UbI-2x-W5d" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n6O-n8-mhE">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -375,9 +374,6 @@
             <point key="canvasLocation" x="417.75700934579436" y="681.64146868250543"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="XGE-6Z-8Qc"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
