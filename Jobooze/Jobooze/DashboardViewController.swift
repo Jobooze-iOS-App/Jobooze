@@ -6,12 +6,21 @@
 //
 
 import UIKit
+import Parse
 
 class DashboardViewController: UIViewController {
 
+    @IBOutlet weak var greetingLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let currentUser = PFUser.current()
+        let firstName = currentUser?.value(forKey: "firstName") as? String
+        
+        greetingLabel.text = "Hi, " + firstName! + "!"
+        
         // Do any additional setup after loading the view.
     }
     

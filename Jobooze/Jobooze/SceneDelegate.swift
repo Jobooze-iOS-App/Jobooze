@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        
         NotificationCenter.default.addObserver(forName: Notification.Name("login"), object: nil, queue: OperationQueue.main) { (Notification) in
             print("Login Notification Received!")
             self.login()
@@ -26,13 +27,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if (PFUser.current() != nil) {
             login()
         }
-        
-        guard let _ = (scene as? UIWindowScene) else { return }
     }
     
     func login() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "")
+        let appTabController = storyboard.instantiateViewController(withIdentifier: "AppTabController")
+        
+        window?.rootViewController = appTabController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

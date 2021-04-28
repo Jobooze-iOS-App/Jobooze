@@ -34,7 +34,7 @@ class SignUpViewController: UIViewController {
         
         user.signUpInBackground { (success, error) in
             if success && user.password == self.confirmPwdField.text! {
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self.performSegue(withIdentifier: "loginFromSignUpSegue", sender: nil)
             } else {
                 print("Error with signing up \(String(describing: error?.localizedDescription))")
             }
@@ -45,6 +45,15 @@ class SignUpViewController: UIViewController {
     @IBAction func OnSignIn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
+    
+    
     
     /*
     // MARK: - Navigation

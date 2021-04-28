@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -129,9 +129,9 @@
 				8B2836EE262F66FB0098A97A /* LoginViewController.swift */,
 				8B2836F3262F67050098A97A /* SignUpViewController.swift */,
 				8B283702262F756B0098A97A /* DashboardViewController.swift */,
+				8BEC20892637CCAB00568BA0 /* NewEntryViewController.swift */,
 				8B28370A262F775E0098A97A /* ProfileViewController.swift */,
 				8B2836BB262F66B90098A97A /* Main.storyboard */,
-				8BEC20892637CCAB00568BA0 /* NewEntryViewController.swift */,
 				8B2836BE262F66B90098A97A /* Assets.xcassets */,
 				8B2836C0262F66B90098A97A /* LaunchScreen.storyboard */,
 				8B2836C3262F66B90098A97A /* Info.plist */,
@@ -177,7 +177,6 @@
 				6BB14A0DFE36FC68F1BDD1D9 /* Pods-JoboozeTests.debug.xcconfig */,
 				C08D724C10061BCDE3DA81B9 /* Pods-JoboozeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -643,6 +642,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92CYMJ7RBT;
 				INFOPLIST_FILE = JoboozeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -665,6 +665,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92CYMJ7RBT;
 				INFOPLIST_FILE = JoboozeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -686,6 +687,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92CYMJ7RBT;
 				INFOPLIST_FILE = JoboozeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -706,6 +708,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92CYMJ7RBT;
 				INFOPLIST_FILE = JoboozeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

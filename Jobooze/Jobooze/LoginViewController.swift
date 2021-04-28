@@ -22,15 +22,17 @@ class LoginViewController: UIViewController {
     
     //will take the user to the dashboard if user exists
     @IBAction func onSignIn(_ sender: Any) {
-        
+            
         let username = usernameField.text!
         let password = passwordField.text!
+        
         
         PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
             if user != nil {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
-                print("Error with login up \(String(describing: error?.localizedDescription))")
+                self.incorrectInfoPopUp()
+                print("Error: \(String(describing: error?.localizedDescription))")
             }
         }
         
@@ -39,6 +41,21 @@ class LoginViewController: UIViewController {
     //segue that will allow the user to sign up
     @IBAction func onSignUp(_ sender: Any) {
         performSegue(withIdentifier: "ToSignUp", sender: nil)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
+  
+       
+    func incorrectInfoPopUp() {
+        let alert = UIAlertController(title: "Uh-Oh!", message: "The username and password you entered did not match our records. Please double-check and try again.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        alert.addAction(UIAlertAction(title: "Reset Password", style: .default))
+                                      
+        self.present(alert, animated: true, completion: nil)
     }
     
     /*
