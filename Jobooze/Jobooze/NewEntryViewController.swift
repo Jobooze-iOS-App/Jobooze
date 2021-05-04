@@ -1,26 +1,17 @@
 //
-//  DashboardViewController.swift
+//  NewEntryViewController.swift
 //  Jobooze
 //
-//  Created by Nicholas Palermo on 4/20/21.
+//  Created by Nicholas Palermo on 4/27/21.
 //
 
 import UIKit
-import Parse
 
-class DashboardViewController: UIViewController {
+class NewEntryViewController: UIViewController {
 
-    @IBOutlet weak var greetingLabel: UILabel!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let currentUser = PFUser.current()
-        let firstName = currentUser?.value(forKey: "firstName") as? String
-        
-        greetingLabel.text = "Hi, " + firstName! + "!"
-        
         // Do any additional setup after loading the view.
     }
     

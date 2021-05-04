@@ -21,7 +21,8 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+//    after successful sign up, do we direct the user to their dashboard or have them login first? Former: we add a segue from the signup button to the dashboard; latter: we simply dismiss the sign up view so the user can login
     @IBAction func onSignUp(_ sender: Any) {
         let user = PFUser()
         user.username = emailField.text!
@@ -33,7 +34,7 @@ class SignUpViewController: UIViewController {
         
         user.signUpInBackground { (success, error) in
             if success && user.password == self.confirmPwdField.text! {
-                self.performSegue(withIdentifier: "signUpSegue", sender: nil)
+                self.performSegue(withIdentifier: "loginFromSignUpSegue", sender: nil)
             } else {
                 print("Error with signing up \(String(describing: error?.localizedDescription))")
             }
@@ -44,6 +45,15 @@ class SignUpViewController: UIViewController {
     @IBAction func OnSignIn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
+    
+    
     
     /*
     // MARK: - Navigation
