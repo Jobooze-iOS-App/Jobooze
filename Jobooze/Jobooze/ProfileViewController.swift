@@ -6,9 +6,20 @@
 //
 
 import UIKit
+import Parse
 
 class ProfileViewController: UIViewController {
 
+    @IBAction func onLogout(_ sender: Any) {
+        PFUser.logOut()
+                       
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
+                       
+        let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                       
+        delegate.window?.rootViewController = loginViewController
+    }
     @IBAction func addJob(_ sender: Any) {
     }
     @IBOutlet weak var position: UILabel!
