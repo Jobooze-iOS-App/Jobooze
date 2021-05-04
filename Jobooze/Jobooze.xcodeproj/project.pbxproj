@@ -20,6 +20,7 @@
 		8B283703262F756B0098A97A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B283702262F756B0098A97A /* DashboardViewController.swift */; };
 		8B28370B262F775E0098A97A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28370A262F775E0098A97A /* ProfileViewController.swift */; };
 		AB2E8F3FF7E15DE7D8A97C9E /* Pods_JoboozeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B128C2FA49436D54874D468 /* Pods_JoboozeTests.framework */; };
+		D4AEBBF62638AA20007185B0 /* KeyboardInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AEBBF52638AA20007185B0 /* KeyboardInputAccessoryView.swift */; };
 		F916EB2D7A9AB618D8E031A4 /* Pods_Jobooze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62018AC439D69AB3E1FEE893 /* Pods_Jobooze.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		8B28370A262F775E0098A97A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9360035061F2754DFDA91059 /* Pods_Jobooze_JoboozeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobooze_JoboozeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08D724C10061BCDE3DA81B9 /* Pods-JoboozeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoboozeTests.release.xcconfig"; path = "Target Support Files/Pods-JoboozeTests/Pods-JoboozeTests.release.xcconfig"; sourceTree = "<group>"; };
+		D4AEBBF52638AA20007185B0 /* KeyboardInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInputAccessoryView.swift; sourceTree = "<group>"; };
 		F38E81B50B37570311BE7E76 /* Pods-Jobooze-JoboozeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobooze-JoboozeUITests.release.xcconfig"; path = "Target Support Files/Pods-Jobooze-JoboozeUITests/Pods-Jobooze-JoboozeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F5ED99E5C648E2ED63C54C36 /* Pods-Jobooze-JoboozeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobooze-JoboozeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Jobooze-JoboozeUITests/Pods-Jobooze-JoboozeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC3A626638AEF6721496437E /* Pods-Jobooze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobooze.release.xcconfig"; path = "Target Support Files/Pods-Jobooze/Pods-Jobooze.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		8B2836B4262F66B90098A97A /* Jobooze */ = {
 			isa = PBXGroup;
 			children = (
+				D4AEBBF22638A933007185B0 /* KeyboardInputView */,
 				8B2836B5262F66B90098A97A /* AppDelegate.swift */,
 				8B2836B7262F66B90098A97A /* SceneDelegate.swift */,
 				8B2836EE262F66FB0098A97A /* LoginViewController.swift */,
@@ -175,6 +178,14 @@
 				C08D724C10061BCDE3DA81B9 /* Pods-JoboozeTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D4AEBBF22638A933007185B0 /* KeyboardInputView */ = {
+			isa = PBXGroup;
+			children = (
+				D4AEBBF52638AA20007185B0 /* KeyboardInputAccessoryView.swift */,
+			);
+			name = KeyboardInputView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +430,7 @@
 				8B2836EF262F66FB0098A97A /* LoginViewController.swift in Sources */,
 				8B2836B6262F66B90098A97A /* AppDelegate.swift in Sources */,
 				8B283703262F756B0098A97A /* DashboardViewController.swift in Sources */,
+				D4AEBBF62638AA20007185B0 /* KeyboardInputAccessoryView.swift in Sources */,
 				8B2836F4262F67050098A97A /* SignUpViewController.swift in Sources */,
 				8B2836B8262F66B90098A97A /* SceneDelegate.swift in Sources */,
 			);

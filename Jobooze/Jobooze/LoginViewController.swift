@@ -9,7 +9,15 @@ import UIKit
 import AlamofireImage
 import Parse
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController/*, KeyboardInputAccessoryViewProtocol*/{
+    /*func send(data type: String) {
+    
+    }
+    
+    func scrollView() -> UIScrollView {
+    
+    }*/
+    
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -19,6 +27,18 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    //custom keyboard input view
+    override var inputAccessoryView: UIView? {
+        return nil //here come out input view
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return false //will tell us whether it can become the first responder or not
+    }
+    
+//    override func
+    
     
     //will take the user to the dashboard if user exists
     @IBAction func onSignIn(_ sender: Any) {

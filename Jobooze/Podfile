@@ -8,6 +8,7 @@ target 'Jobooze' do
   # Pods for Jobooze
   pod 'AlamofireImage'
   pod 'Parse'
+  pod 'InputBarAccessoryView'
 
   target 'JoboozeTests' do
     inherit! :search_paths
