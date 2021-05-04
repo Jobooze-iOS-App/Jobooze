@@ -10,6 +10,7 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBAction func addJob(_ sender: Any) {
+    
     }
     @IBOutlet weak var position: UILabel!
     @IBOutlet weak var username: UILabel!

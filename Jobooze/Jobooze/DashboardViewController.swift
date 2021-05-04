@@ -11,7 +11,7 @@ import Parse
 class DashboardViewController: UIViewController {
 
     @IBOutlet weak var greetingLabel: UILabel!
-    
+    @IBOutlet weak var jobsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,8 @@ class DashboardViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    
     
 
     /*

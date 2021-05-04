@@ -9,14 +9,7 @@ import UIKit
 import AlamofireImage
 import Parse
 
-class LoginViewController: UIViewController/*, KeyboardInputAccessoryViewProtocol*/{
-    /*func send(data type: String) {
-    
-    }
-    
-    func scrollView() -> UIScrollView {
-    
-    }*/
+class LoginViewController: UIViewController {
     
 
     @IBOutlet weak var usernameField: UITextField!
@@ -36,8 +29,6 @@ class LoginViewController: UIViewController/*, KeyboardInputAccessoryViewProtoco
     override var canBecomeFirstResponder: Bool {
         return false //will tell us whether it can become the first responder or not
     }
-    
-//    override func
     
     
     //will take the user to the dashboard if user exists
@@ -68,8 +59,6 @@ class LoginViewController: UIViewController/*, KeyboardInputAccessoryViewProtoco
         super.touchesBegan(touches, with: event)
     }
     
-  
-       
     func incorrectInfoPopUp() {
         let alert = UIAlertController(title: "Uh-Oh!", message: "The username and password you entered did not match our records. Please double-check and try again.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
