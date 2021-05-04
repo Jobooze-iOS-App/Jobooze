@@ -11,7 +11,7 @@
         <!--LoginViewController-->
         <scene sceneID="WYc-Qq-hMv">
             <objects>
-                <viewController title="LoginViewController" modalPresentationStyle="fullScreen" id="gkI-W2-zGT" customClass="LoginViewController" customModule="Jobooze" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="LoginViewController" modalPresentationStyle="fullScreen" id="gkI-W2-zGT" customClass="LoginViewController" customModule="Jobooze" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C44-4L-Ybk">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,6 +83,10 @@
                                     <action selector="onSignIn:" destination="gkI-W2-zGT" eventType="touchUpInside" id="i1Y-Ar-SWd"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Jobooze (1)" translatesAutoresizingMaskIntoConstraints="NO" id="dY7-3i-I3Y">
+                                <rect key="frame" x="0.0" y="11" width="428" height="354"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9jt-6c-Zp5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -97,6 +101,7 @@
                             <constraint firstItem="fSD-Gt-OE2" firstAttribute="leading" secondItem="9jt-6c-Zp5" secondAttribute="leading" constant="40" id="sgT-Rg-7BS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hIJ-B4-UBK"/>
                     <connections>
                         <outlet property="passwordField" destination="j7e-uz-DjV" id="Y5Y-6k-YGG"/>
                         <outlet property="usernameField" destination="caN-MW-Pgs" id="LrW-dt-q0m"/>
@@ -106,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LGQ-9i-MJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1619" y="-123"/>
+            <point key="canvasLocation" x="-1619.1588785046729" y="-123.11015118790498"/>
         </scene>
         <!--DashboardViewController-->
         <scene sceneID="6hh-mZ-COi">
@@ -117,7 +122,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Khh-Iy-Z4Y">
-                                <rect key="frame" x="0.0" y="248" width="428" height="286"/>
+                                <rect key="frame" x="0.0" y="248" width="428" height="595"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -176,7 +181,13 @@
                         <viewLayoutGuide key="safeArea" id="1u4-Ze-bdp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LYE-i8-d1l"/>
+                    <navigationItem key="navigationItem" id="LYE-i8-d1l">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="BZX-fM-Uji">
+                            <connections>
+                                <action selector="onLogout:" destination="b2M-Rh-5fr" id="dxs-g5-Avz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="greetingLabel" destination="thu-zw-toz" id="pQF-B4-WGY"/>
                         <outlet property="jobsTableView" destination="Khh-Iy-Z4Y" id="342-57-8dj"/>
@@ -445,7 +456,13 @@
                             <constraint firstItem="7jl-l8-y2c" firstAttribute="top" secondItem="ydD-j5-hZ2" secondAttribute="top" constant="19" id="tIs-Qf-ocw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0NZ-fY-RsR"/>
+                    <navigationItem key="navigationItem" id="0NZ-fY-RsR">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="4cf-ug-rjd">
+                            <connections>
+                                <action selector="onLogout:" destination="BpK-nZ-hFy" id="FqS-1G-OVm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="position" destination="1UH-6T-0Nw" id="eml-QC-c4K"/>
                         <outlet property="profilepic" destination="7jl-l8-y2c" id="vDd-ew-Iha"/>
@@ -570,6 +587,10 @@
                                     <action selector="onSignUp:" destination="f3c-Vr-FID" eventType="touchUpInside" id="tu2-UJ-cgG"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Jobooze (1)" translatesAutoresizingMaskIntoConstraints="NO" id="nN5-l5-cof">
+                                <rect key="frame" x="0.0" y="-11" width="428" height="354"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1k7-cH-8hI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -620,11 +641,12 @@
         <!--Navigation Controller-->
         <scene sceneID="KaM-Pb-bsW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Ixx-ys-jjx" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ixx-ys-jjx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" selectedImage="house.fill" id="ZXW-WX-Xff"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OtI-0d-W4G">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -682,6 +704,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="181.33332824707031" height="155.33332824707031"/>
+        <image name="Jobooze (1)" width="500" height="500"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>

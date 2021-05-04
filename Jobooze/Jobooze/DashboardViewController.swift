@@ -11,7 +11,17 @@ import Parse
 class DashboardViewController: UIViewController {
 
     @IBOutlet weak var greetingLabel: UILabel!
-    @IBOutlet weak var jobsTableView: UITableView!
+    
+    @IBAction func onLogout(_ sender: Any) {
+        PFUser.logOut()
+                       
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
+                       
+        let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                       
+        delegate.window?.rootViewController = loginViewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +33,6 @@ class DashboardViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
-    
     
 
     /*
