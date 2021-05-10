@@ -7,10 +7,53 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var jobsTableView: UITableView!
+    
+    //variables that contain values that will be passed to the next view controller
+    var objectId = ""
+    var companyName = ""
+    var position = ""
+    var location = ""
+    var dateApplied = ""
+    var additionalText = ""
+    
+    var notes = [PFObject]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        jobsTableView.delegate = self
+        jobsTableView.dataSource = self
+        
+        let currentUser = PFUser.current()
+        let firstName = currentUser?.value(forKey: "firstName") as? String
+        
+        greetingLabel.text = "Hi, " + firstName! + "!"
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        print("viewWillAppear()")
+        let query = PFQuery(className: "Notes")
+        query.whereKey("author", contains: PFUser.current()?.objectId)
+//        query.includeKey("author")
+        query.limit = 20
+        
+        query.findObjectsInBackground { (notes, error) in
+            if notes != nil {
+                self.notes = notes!
+                self.jobsTableView.reloadData()
+            }
+        }
+    }
     
     @IBAction func onLogout(_ sender: Any) {
         PFUser.logOut()
@@ -22,19 +65,48 @@ class DashboardViewController: UIViewController {
                        
         delegate.window?.rootViewController = loginViewController
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        let currentUser = PFUser.current()
-        let firstName = currentUser?.value(forKey: "firstName") as? String
-        
-        greetingLabel.text = "Hi, " + firstName! + "!"
-        
-        // Do any additional setup after loading the view.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let editViewController = segue.destination as? EditJobsViewController {
+            editViewController.companyName = companyName
+            editViewController.position = position
+            editViewController.location = location
+            editViewController.dateApplied = dateApplied
+            editViewController.additionalText = additionalText
+            editViewController.objectId = objectId
+        }
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return notes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = jobsTableView.dequeueReusableCell(withIdentifier: "JobTableViewCell") as! JobTableViewCell
+        
+        let note = notes[indexPath.row]
+        
+        cell.jobNameLabel.text = note["jobTitle"] as! String
+        cell.statusLabel.text = note["status"] as! String
+        cell.companyLabel.text = note["companyName"] as! String
+        cell.dateAppliedLabel.text = note["appliedAt"] as? String
+        
+        return cell
+    }
 
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        let selectedNote = notes[indexPath.row]
+        
+        companyName = selectedNote["companyName"] as! String
+        position = selectedNote["jobTitle"] as! String
+        location = selectedNote["location"] as! String
+        additionalText = selectedNote["comments"] as! String
+        objectId = selectedNote.objectId!
+        
+        return indexPath
+    }
+    
+    
     /*
     // MARK: - Navigation
 
