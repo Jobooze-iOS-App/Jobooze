@@ -91,12 +91,10 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.jobNameLabel.text = note["jobTitle"] as! String
         cell.statusLabel.text = note["status"] as! String
         cell.companyLabel.text = note["companyName"] as! String
-//        cell.dateAppliedLabel.text = note["appliedAt"] as? NSDate as String?
-//        print("row: ", indexPath.row, "  date: ", note["appliedAt"])
-        if let date = note["appliedAt"] as? Date {
+        if let date = note.createdAt as? Date {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MM/dd/YY"
-            cell.dateAppliedLabel.text = dateFormatter.string(from: date)
+            cell.dateCreated.text = dateFormatter.string(from: date)
         } else {
             print("Still nil")
         }

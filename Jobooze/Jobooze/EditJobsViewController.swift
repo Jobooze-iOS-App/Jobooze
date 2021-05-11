@@ -16,6 +16,7 @@ class EditJobsViewController: UIViewController {
     @IBOutlet weak var statusControl: UISegmentedControl!
     @IBOutlet weak var commentsTextView: UITextView!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var datePickerLabel: UILabel!
     
     //variables to catch info from Dashboard View
     var objectId = ""
@@ -56,6 +57,15 @@ class EditJobsViewController: UIViewController {
     
     @IBAction func statusSwitch(_ sender: Any) {
         status = statusControl.titleForSegment(at: statusControl.selectedSegmentIndex)!
+        setDatePickerLabel()
+    }
+    
+    func setDatePickerLabel() {
+        if status == "Pending" {
+            datePickerLabel.text = "Will apply on:"
+        } else {
+            datePickerLabel.text = status + " on:"
+        }
     }
     
     func setupUIElements() {
@@ -71,6 +81,7 @@ class EditJobsViewController: UIViewController {
         } else if status == statusControl.titleForSegment(at: 2) {
             statusControl.selectedSegmentIndex = 2
         }
+        setDatePickerLabel()
     }
 
     func storeValues() {
