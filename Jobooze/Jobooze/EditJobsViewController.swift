@@ -13,17 +13,18 @@ class EditJobsViewController: UIViewController {
     @IBOutlet weak var companyTextField: UITextField!
     @IBOutlet weak var positionTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
-    @IBOutlet weak var dateAppliedTextField: UITextField!
     @IBOutlet weak var statusControl: UISegmentedControl!
-    @IBOutlet weak var additionalTextField: UITextField!
+    @IBOutlet weak var commentsTextView: UITextView!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     //variables to catch info from Dashboard View
     var objectId = ""
     var companyName = ""
     var position = ""
     var location = ""
-    var dateApplied = ""
     var additionalText = ""
+    var status = ""
+    var applied = Date()
     
     var notes = [PFObject]()
     
@@ -53,16 +54,26 @@ class EditJobsViewController: UIViewController {
         delegate.window?.rootViewController = loginViewController
     }
     
+    @IBAction func statusSwitch(_ sender: Any) {
+        status = statusControl.titleForSegment(at: statusControl.selectedSegmentIndex)!
+    }
+    
     func setupUIElements() {
         companyTextField.text = companyName
         positionTextField.text = position
         locationTextField.text = location
-        dateAppliedTextField.text = dateApplied
-        additionalTextField.text = additionalText
+        datePicker.setDate(applied as Date, animated: true)
+        commentsTextView.text = additionalText
+        if status == statusControl.titleForSegment(at: 0) {
+            statusControl.selectedSegmentIndex = 0
+        } else if status == statusControl.titleForSegment(at: 1) {
+            statusControl.selectedSegmentIndex = 1
+        } else if status == statusControl.titleForSegment(at: 2) {
+            statusControl.selectedSegmentIndex = 2
+        }
     }
 
     func storeValues() {
-        print("store values()")
         let query = PFQuery(className:"Notes")
         query.getObjectInBackground(withId: objectId) { (note, error: Error?) -> Void in
             if error != nil {
@@ -72,8 +83,9 @@ class EditJobsViewController: UIViewController {
                 note!.setObject(self.companyTextField.text!, forKey: "companyName")
                 note!.setObject(self.positionTextField.text!, forKey: "jobTitle")
                 note!.setObject(self.locationTextField.text!, forKey: "location")
-                note!.setObject(self.additionalTextField.text!, forKey: "comments")
-
+                note!.setObject(self.commentsTextView.text!, forKey: "comments")
+                note!.setObject(self.datePicker.date, forKey: "appliedAt")
+                note!.setObject(self.statusControl.titleForSegment(at: self.statusControl.selectedSegmentIndex)!, forKey: "status")
                 note?.saveInBackground()
             }
         }

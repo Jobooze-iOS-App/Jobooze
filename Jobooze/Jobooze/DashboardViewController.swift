@@ -19,8 +19,9 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     var companyName = ""
     var position = ""
     var location = ""
-    var dateApplied = ""
     var additionalText = ""
+    var status = ""
+    var applied = Date()
     
     var notes = [PFObject]()
     
@@ -71,8 +72,9 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             editViewController.companyName = companyName
             editViewController.position = position
             editViewController.location = location
-            editViewController.dateApplied = dateApplied
             editViewController.additionalText = additionalText
+            editViewController.status = status
+            editViewController.applied = applied
             editViewController.objectId = objectId
         }
     }
@@ -89,8 +91,16 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.jobNameLabel.text = note["jobTitle"] as! String
         cell.statusLabel.text = note["status"] as! String
         cell.companyLabel.text = note["companyName"] as! String
-        cell.dateAppliedLabel.text = note["appliedAt"] as? String
-        
+//        cell.dateAppliedLabel.text = note["appliedAt"] as? NSDate as String?
+//        print("row: ", indexPath.row, "  date: ", note["appliedAt"])
+        if let date = note["appliedAt"] as? Date {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/YY"
+            cell.dateAppliedLabel.text = dateFormatter.string(from: date)
+        } else {
+            print("Still nil")
+        }
+                
         return cell
     }
 
@@ -101,6 +111,8 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         position = selectedNote["jobTitle"] as! String
         location = selectedNote["location"] as! String
         additionalText = selectedNote["comments"] as! String
+        status = selectedNote["status"] as! String
+        applied = selectedNote["appliedAt"] as! Date
         objectId = selectedNote.objectId!
         
         return indexPath
