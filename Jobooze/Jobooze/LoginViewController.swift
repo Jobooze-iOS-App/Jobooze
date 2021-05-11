@@ -10,6 +10,7 @@ import AlamofireImage
 import Parse
 
 class LoginViewController: UIViewController {
+    
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -20,12 +21,21 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //custom keyboard input view
+    override var inputAccessoryView: UIView? {
+        return nil //here come out input view
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return false //will tell us whether it can become the first responder or not
+    }
+    
+    
     //will take the user to the dashboard if user exists
     @IBAction func onSignIn(_ sender: Any) {
             
         let username = usernameField.text!
         let password = passwordField.text!
-        
         
         PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
             if user != nil {
@@ -48,8 +58,6 @@ class LoginViewController: UIViewController {
         super.touchesBegan(touches, with: event)
     }
     
-  
-       
     func incorrectInfoPopUp() {
         let alert = UIAlertController(title: "Uh-Oh!", message: "The username and password you entered did not match our records. Please double-check and try again.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))

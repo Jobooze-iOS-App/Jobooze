@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController {
         delegate.window?.rootViewController = loginViewController
     }
     @IBAction func addJob(_ sender: Any) {
+    
     }
     @IBOutlet weak var position: UILabel!
     @IBOutlet weak var username: UILabel!
