@@ -91,14 +91,6 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.jobNameLabel.text = note["jobTitle"] as! String
         cell.statusLabel.text = note["status"] as! String
         cell.companyLabel.text = note["companyName"] as! String
-        if let date = note.createdAt as? Date {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MM/dd/YY"
-            cell.dateCreated.text = dateFormatter.string(from: date)
-        } else {
-            print("Still nil")
-        }
-                
         return cell
     }
 

@@ -427,7 +427,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="D47-Ch-qm1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="D47-Ch-qm1" customClass="profileTableViewCell" customModule="Jobooze" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="388" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D47-Ch-qm1" id="Gah-mA-bTB">
@@ -450,6 +450,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jobName" destination="Pie-Ah-Jbe" id="No5-fn-AVA"/>
+                                            <outlet property="jobStatus" destination="STB-Px-oHA" id="LD4-Qz-ZaE"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -516,8 +520,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="position" destination="1UH-6T-0Nw" id="eml-QC-c4K"/>
+                        <outlet property="profileTableView" destination="uc5-8h-kZa" id="7xs-Mc-CPC"/>
                         <outlet property="profilepic" destination="7jl-l8-y2c" id="vDd-ew-Iha"/>
-                        <outlet property="username" destination="n5w-IQ-ZUT" id="bfe-Ov-FFp"/>
+                        <outlet property="username" destination="n5w-IQ-ZUT" id="Z46-hb-iUf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8n-nv-Xhl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
