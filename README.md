@@ -30,8 +30,8 @@ Jobooze is an app designed to help users keep track of jobs they are interested 
 - [x] Login/Logout features
 - [ ] Create a new note/record of what job the user has applied to with the appropriate tags/status (indicating a job they applied to, will apply to, how important it is to them, etc)
 - [ ] Delete unwanted notes
-- [ ] Upload files (like resumes, profile pics, etc)
-- [ ] Edit/view the listing
+- [x] Upload files (like resumes, profile pics, etc)
+- [x] Edit/view the listing
 
 **Optional, Nice-to-have Stories**
 
@@ -160,3 +160,4 @@ Jobooze is an app designed to help users keep track of jobs they are interested 
 ### Gifs
 
 <img src='http://g.recordit.co/hFcNOP1pWT.gif' title='Video Walkthrough1' width='' alt='Video Walkthrough1' />
+<img src='http://g.recordit.co/KiadGp6rma.gif' title='Video Walkthrough2' width='' alt='Video Walkthrough2' />
