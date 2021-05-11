@@ -161,3 +161,4 @@ Jobooze is an app designed to help users keep track of jobs they are interested 
 
 <img src='http://g.recordit.co/hFcNOP1pWT.gif' title='Video Walkthrough1' width='' alt='Video Walkthrough1' />
 <img src='http://g.recordit.co/KiadGp6rma.gif' title='Video Walkthrough2' width='' alt='Video Walkthrough2' />
+<img src='http://g.recordit.co/SGn0RYtzXm.gif' title='Video Walkthrough3' width='' alt='Video Walkthrough3' />
