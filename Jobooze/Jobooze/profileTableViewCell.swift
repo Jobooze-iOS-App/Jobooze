@@ -11,10 +11,8 @@ import AlamofireImage
 
 class profileTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var jobName: UILabel!
-    
     @IBOutlet weak var jobStatus: UILabel!
-    
+    @IBOutlet weak var companyName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

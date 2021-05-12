@@ -416,8 +416,8 @@
                                     <action selector="uploadBut:" destination="BpK-nZ-hFy" eventType="touchUpInside" id="rj8-kO-d8Y"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Software engineer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-6T-0Nw">
-                                <rect key="frame" x="138.33333333333337" y="374.33333333333331" width="152.66666666666663" height="23.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-6T-0Nw" userLabel="emailField">
+                                <rect key="frame" x="191.66666666666666" y="374.33333333333331" width="45.666666666666657" height="23.333333333333314"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -427,15 +427,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="D47-Ch-qm1" customClass="profileTableViewCell" customModule="Jobooze" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileTableViewCell" id="D47-Ch-qm1" customClass="profileTableViewCell" customModule="Jobooze" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="388" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D47-Ch-qm1" id="Gah-mA-bTB">
                                             <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pie-Ah-Jbe">
-                                                    <rect key="frame" x="20" y="9" width="75" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="company name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pie-Ah-Jbe" userLabel="companyName">
+                                                    <rect key="frame" x="20" y="9" width="117" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -451,7 +451,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="jobName" destination="Pie-Ah-Jbe" id="No5-fn-AVA"/>
+                                            <outlet property="companyName" destination="Pie-Ah-Jbe" id="Wk6-41-Phx"/>
                                             <outlet property="jobStatus" destination="STB-Px-oHA" id="LD4-Qz-ZaE"/>
                                         </connections>
                                     </tableViewCell>
@@ -487,7 +487,7 @@
                                     <segue destination="Dfj-AE-Slx" kind="presentation" id="nDZ-Yg-NUo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp2-0y-HzY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp2-0y-HzY" userLabel="jobsNumber">
                                 <rect key="frame" x="365" y="489" width="43" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -519,7 +519,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="position" destination="1UH-6T-0Nw" id="eml-QC-c4K"/>
+                        <outlet property="emailField" destination="1UH-6T-0Nw" id="S0l-Ua-xKb"/>
+                        <outlet property="jobsNumber" destination="gp2-0y-HzY" id="J6i-pV-BM4"/>
                         <outlet property="profileTableView" destination="uc5-8h-kZa" id="7xs-Mc-CPC"/>
                         <outlet property="profilepic" destination="7jl-l8-y2c" id="vDd-ew-Iha"/>
                         <outlet property="username" destination="n5w-IQ-ZUT" id="Z46-hb-iUf"/>

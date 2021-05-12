@@ -14,9 +14,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var username: UILabel!
     
+    @IBOutlet weak var jobsNumber: UILabel!
+    @IBOutlet weak var emailField: UILabel!
     @IBOutlet weak var profileTableView: UITableView!
     
-    @IBOutlet weak var position: UILabel!
     @IBOutlet weak var profilepic: UIImageView!
     
     @IBAction func uploadBut(_ sender: Any) {
@@ -32,8 +33,14 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let currentUser = PFUser.current()
         let firstName = currentUser?.value(forKey: "firstName") as? String
+        let lastName = currentUser?.value(forKey: "lastName") as? String
+        let email = currentUser?.value(forKey: "email") as? String
         
-        username.text =  firstName!
+        
+        username.text =  firstName! + " " + lastName!
+        emailField.text = email!
+        
+        
         
         
         // Do any additional setup after loading the view.
@@ -59,7 +66,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        jobsNumber.text = String(notes.count)
         return notes.count
+        
     }
     
     
@@ -69,7 +79,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let note = notes[indexPath.row]
         
-        cell.jobName.text = note["jobTitle"] as! String
+        cell.companyName.text = note["companyName"] as! String
         cell.jobStatus.text = note["status"] as! String
    
                 
