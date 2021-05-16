@@ -65,6 +65,7 @@ class NewEntryViewController: UIViewController/*, InputBarAccessoryViewDelegate*
 //    }
     
     @IBAction func onCancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
         //what happens? We return to the dashboard, reset the fields? etc
     }
     

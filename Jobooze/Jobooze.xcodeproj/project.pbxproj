@@ -21,6 +21,7 @@
 		8B28370B262F775E0098A97A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28370A262F775E0098A97A /* ProfileViewController.swift */; };
 		8BEC208A2637CCAB00568BA0 /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC20892637CCAB00568BA0 /* NewEntryViewController.swift */; };
 		8EEF0074264B160D00755867 /* profileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF0073264B160D00755867 /* profileTableViewCell.swift */; };
+		A0043EFE2651B63C007E0E93 /* ProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0043EFD2651B63C007E0E93 /* ProfilePicViewController.swift */; };
 		AB2E8F3FF7E15DE7D8A97C9E /* Pods_JoboozeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B128C2FA49436D54874D468 /* Pods_JoboozeTests.framework */; };
 		D48C60FE26484F5C00B146D1 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C60FD26484F5C00B146D1 /* JobTableViewCell.swift */; };
 		D48C61002648DC3E00B146D1 /* EditJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C60FF2648DC3E00B146D1 /* EditJobsViewController.swift */; };
@@ -70,6 +71,7 @@
 		8BEC20892637CCAB00568BA0 /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
 		8EEF0073264B160D00755867 /* profileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileTableViewCell.swift; sourceTree = "<group>"; };
 		9360035061F2754DFDA91059 /* Pods_Jobooze_JoboozeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobooze_JoboozeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0043EFD2651B63C007E0E93 /* ProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicViewController.swift; sourceTree = "<group>"; };
 		C08D724C10061BCDE3DA81B9 /* Pods-JoboozeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoboozeTests.release.xcconfig"; path = "Target Support Files/Pods-JoboozeTests/Pods-JoboozeTests.release.xcconfig"; sourceTree = "<group>"; };
 		D48C60FD26484F5C00B146D1 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		D48C60FF2648DC3E00B146D1 /* EditJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditJobsViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				D4AEBBF22638A933007185B0 /* KeyboardInputView */,
 				8B2836B5262F66B90098A97A /* AppDelegate.swift */,
 				8B2836B7262F66B90098A97A /* SceneDelegate.swift */,
+				A0043EFD2651B63C007E0E93 /* ProfilePicViewController.swift */,
 				8B2836EE262F66FB0098A97A /* LoginViewController.swift */,
 				8B2836F3262F67050098A97A /* SignUpViewController.swift */,
 				8B283702262F756B0098A97A /* DashboardViewController.swift */,
@@ -443,6 +446,7 @@
 				8B2836EF262F66FB0098A97A /* LoginViewController.swift in Sources */,
 				D48C61002648DC3E00B146D1 /* EditJobsViewController.swift in Sources */,
 				8B2836B6262F66B90098A97A /* AppDelegate.swift in Sources */,
+				A0043EFE2651B63C007E0E93 /* ProfilePicViewController.swift in Sources */,
 				8B283703262F756B0098A97A /* DashboardViewController.swift in Sources */,
 				D4AEBBF62638AA20007185B0 /* KeyboardInputAccessoryView.swift in Sources */,
 				8B2836F4262F67050098A97A /* SignUpViewController.swift in Sources */,
@@ -626,13 +630,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CMNC78D6DM;
+				DEVELOPMENT_TEAM = P32AQ5D5WR;
 				INFOPLIST_FILE = Jobooze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "CodePath-iOSUniversity-Spring2021-Andy.Jobooze";
+				PRODUCT_BUNDLE_IDENTIFIER = "CodePath-iOSUniversity-Spring2021-Andrea.Jobooze";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -646,13 +650,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CMNC78D6DM;
+				DEVELOPMENT_TEAM = P32AQ5D5WR;
 				INFOPLIST_FILE = Jobooze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "CodePath-iOSUniversity-Spring2021-Andy.Jobooze";
+				PRODUCT_BUNDLE_IDENTIFIER = "CodePath-iOSUniversity-Spring2021-Andrea.Jobooze";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
